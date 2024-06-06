@@ -69,7 +69,7 @@ extension Reeeed {
 
         let exitReaderButton: String
         if includeExitReaderButton {
-            exitReaderButton = "<button onClick=\"document.location = '\(URL.exitReaderModeLink.absoluteString)'\">View Normal Page</button>"
+            exitReaderButton = "<button onClick=\"document.location = '\(URL.exitReaderModeLink.absoluteString)'\">View original</button>"
         } else {
             exitReaderButton = ""
         }
@@ -233,7 +233,6 @@ figcaption, cite {
         \(subtitle)
         \(html)
     <div id="__footer">
-        <div class="label">Automatically converted to Reader Mode</div>
         \(exitReaderButton)
     </div>
 </div>
