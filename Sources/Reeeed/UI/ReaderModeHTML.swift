@@ -104,7 +104,7 @@ body {
 
 #__content {
     line-height: 1.5;
-    font-size: 1.1em;
+    font-size: 1.0em;
     overflow-x: hidden;
 }
 
