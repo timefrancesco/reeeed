@@ -109,7 +109,7 @@ body {
 }
 
 @media screen and (min-width: 650px) {
-    #__content { font-size: 1.35em; line-height: 1.5; }
+    #__content { font-size: 1.05em; line-height: 1.5; }
 }
 
 h1, h2, h3, h4, h5, h6 {
