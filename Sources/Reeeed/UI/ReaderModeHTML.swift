@@ -7,11 +7,19 @@ extension Reeeed {
         let escapedTitle = Entities.escape(title.byStrippingSiteNameFromPageTitle)
         let logger = Reeeed.logger
 
+#if os(visionOS)
+        let (fgLight, fgDark) = ("rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 1)")
+        let (fg2Light, fg2Dark) = ("rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 1)")
+        let (bgLight, bgDark) = ("rgba(255, 255, 255, .4)", "rgba(255, 255, 255, 0)")
+        let (bg2Light, bg2Dark) = ("rgba(255, 255, 255, .4)", "rgba(255, 255, 255, .4)")
+        let (linkLight, linkDark) = ("rgba(51, 153, 255, 1)", "rgba(51, 153, 255, 1)")
+#else
         let (fgLight, fgDark) = theme.foreground.hexPair
         let (fg2Light, fg2Dark) = theme.foreground2.hexPair
         let (bgLight, bgDark) = theme.background.hexPair
         let (bg2Light, bg2Dark) = theme.background2.hexPair
         let (linkLight, linkDark) = theme.link.hexPair
+#endif
 
         let heroHTML: String = {
             if let heroImage = heroImage {
